@@ -1,1 +1,1 @@
-# software
+## YAZILIM MİMARİSİ ÖDEVİ
