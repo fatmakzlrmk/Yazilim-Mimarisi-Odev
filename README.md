@@ -5,3 +5,39 @@ Bu tanımda anlaşılması gereken en önemli nokta, koleksiyonun “iç içe ge
 Bu kavramı, yazılım dışı dünyadan bir örnekle anlatmaya çalışırsak şu an, bilgisayarımızda kullanmakta olduğumuz işletim sistemine bağlı dosya sistemini düşünelim. Masaüstüne bir klasör oluşturduktan sonra iç içe istediğimiz adar klasör ekleyebiliriz. Aynı şekilde bu klasörlerin içinde çeşitli dosyalar da olabilir. Ama dosyalar, bu hiyerarşide en alt sırada olacak. Yani, onların altına başka bir eleman ekleyemeyiz.
 
 ![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/composite.png)
+
+
+Çalışan nesnelerinin listesini içeren işci sınıfı oluştururuz.
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class isci {
+   private String name;
+   private String departman;
+   private int maas;
+   private List<isci> ast;
+
+   public isci(String name,String departman, int maas) {
+      this.name = name;
+      this.dept = departman;
+      this.salary = maas;
+      ast = new ArrayList<isci>();
+   }
+
+   public void ekle(isci Ali) {
+      ast.ekle(Ali);
+   }
+
+   public void cıkar(isci Ali) {
+      ast.cıkar(Ali);
+   }
+
+   public List<isci> getast(){
+     return ast;
+   }
+
+   public String toString(){
+      return ("isci :[ Ad : " + name + ", Departman : " + departman + ", Maası :" + maas+" ]");
+   }   
+```
