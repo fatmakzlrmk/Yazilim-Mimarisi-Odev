@@ -25,19 +25,15 @@ public class isci {
       ast = new ArrayList<isci>();
    }
 
-   public void ekle(isci Ali) {
+```
+isci sınıfımıza işçi ekleyip çıkaarbileceğimizi unutmayalım. Bu yüzden kesinlikle bir ekle ve çıkar metodumuzun bulunması gerekiyor.
+
+```java
+public void ekle(isci Ali) {
       ast.ekle(Ali);
    }
 
    public void cıkar(isci Ali) {
       ast.cıkar(Ali);
    }
-
-   public List<isci> getast(){
-     return ast;
-   }
-
-   public String toString(){
-      return ("isci :[ Ad : " + name + ", Departman : " + departman + ", Maası :" + maas+" ]");
-   }   
 ```
