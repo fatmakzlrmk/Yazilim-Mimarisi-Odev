@@ -42,4 +42,43 @@ Böyle çözümler geliştirirken ne kadar açık bir sistem geliştirirsek o ka
 1-Bileşen tip-spesifik olmalı. Sadece belirli tipler bileşene eklenebilmeli.
 
 2-Bir bileşen, alt bileşenlerden oluşabilmeli.
+
 3-Eklenen her nesne, bileşen olarak kullanılabilmeli.
+
+Bu kurallara bakarak Composite Tasarım deseni oluşturacağız.
+```java
+public class CompositePatternDemo {
+   public static void main(String[] args) {
+   
+      isci CEO = new isci("Yekta","CEO", 30000);
+
+      isci satisDanisman = new isci("Nuray","Satış Danışmanı", 20000);
+
+      isci pazarlama = new isci("Berfin","Pazarlama", 9000);
+      isci muhasebe = new isci("Betül","Muhasebeci", 5000);
+      isci websatis = new isci("Murat","Web Satış Danışmanı", 5000);
+      isci insankay1 = new isci("Ramazan","İnsan Kaynakları", 3000);
+      isci insankay2= new isci("Beytullah","İnsan Kaynakalrı", 3000);
+
+      CEO.ekle(satisDanisman);
+      CEO.ekle(pazarlama);
+
+      pazarlama.ekle(insankay1);
+      pazarlama.ekle(insankay2);
+      
+      pazarlama.ekle(muhasebe);
+      pazarlama.ekle(websatis);
+
+      System.out.println(CEO); 
+      
+      for (isci headisci : CEO.getast()) {
+         System.out.println(headisci);
+         
+         for (isci isci : headisci.getast()) {
+            System.out.println(isci);
+         }
+      }		
+   }
+}
+
+```
