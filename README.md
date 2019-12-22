@@ -82,3 +82,5 @@ public class CompositePatternDemo {
 }
 
 ```
+
+### Factory Tasarım Deseni
