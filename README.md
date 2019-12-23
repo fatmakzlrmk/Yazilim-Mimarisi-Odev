@@ -140,7 +140,7 @@ public class MalzemelerFactory {
 }
 ```
 
-Fabrika gibi türden bir bilgi ileterek somut sınıfın nesnesini elde etmek için aşağıdaki kodu kullanırız.
+Fabrika gibi türden bir bilgi ileterek somut sınıfın nesnesini elde etmek için aşağıdaki `FactoryPatternDemo` kodunu kullanırız.
 
 ![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/malzemelerfactory.png)
 
