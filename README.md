@@ -84,3 +84,33 @@ public class CompositePatternDemo {
 ```
 
 ### Factory Tasarım Deseni
+Factory Method deseninin ana amacı, “genişletilebilirlik” tir. Birbirinden yapısal olarak farklı ancak aynı zamanda birçok karakteristik özelliği ortak olan nesnelerin yönetimi, oluşturma kıstaslarının belirlenmesi ve yaratılması için Factory Metodu kullanılır.
+
+Aynı arayüzü uygulayan somut sınıflar oluşturun.
+
+```java
+public interface Malzemeler {
+   void yap();
+}
+public class igne implements Malzemeler {
+
+   @Override
+   public void yap() {
+      System.out.println("igne::yap() metodu.");
+   }
+}
+public class kumas implements Malzemeler {
+
+   @Override
+   public void yap() {
+      System.out.println("kumas::yap() metodu.");
+   }
+}
+public class iplik implements Malzemeler {
+
+   @Override
+   public void yap() {
+      System.out.println("iplik::yap() metodu.");
+   }
+}
+```
