@@ -116,3 +116,53 @@ public class iplik implements Malzemeler {
    }
 }
 ```
+
+Verilen bilgilere dayanarak somut sınıf nesnesi üretmek için bir Fabrika oluştururuz. `MalzemelerFactory` bizim fabrika metosumuzdur.
+
+```java
+public class MalzemelerFactory {
+    public Malzemler getMalzemeler(String MalzemelerType){
+      if(MalzemelerType == null){
+         return null;
+      }		
+      if(MalzemelerType.equalsIgnoreCase("igne")){
+         return new igne();
+         
+      } else if(MalzemelerType.equalsIgnoreCase("kumas")){
+         return new kumas();
+         
+      } else if(MalzemelerType.equalsIgnoreCase("iplik")){
+         return new iplik();
+      }
+      
+      return null;
+   }
+}
+```
+
+Fabrika gibi türden bir bilgi ileterek somut sınıfın nesnesini elde etmek için aşağıdaki kodu kullanırız.
+
+![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/malzemelerfactory.png)
+
+```java
+public class FactoryPatternDemo {
+
+   public static void main(String[] args) {
+      MalzemlerFactory MalzemelerFactory = new MalzemelerFactory();
+
+       Malzemeler Malzemeler1 = MalzemelerFactory.getMalzemeler("igne");
+
+        Malzemeler1.yap();
+      Malzemeler Malzemeler2 = MalzemelerFactory.getMalzemeler("kumas");
+
+            Malzemeler2.yap();
+Malzemeler Malzemeler3 = MalzemelerFactory.getMalzemeler("iplik");
+Malzemeler3.yap();
+   }
+}
+```
+Bir nesneye bağlı olan ortak nesneleri üretebilmek için Factory metot tasarım desenini kullandım. Bu noktada Factory metodun kurallarını özetlersem;
+
+1-Metot, bir nesne oluşturmalı
+2-Metot, abstract class ya da interface döndürmeli
+3-Bu abstract class veya Interface’ler başka sınıflar tarafından implemente edilmeli.
