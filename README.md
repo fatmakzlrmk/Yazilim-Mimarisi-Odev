@@ -88,6 +88,8 @@ Factory Method deseninin ana amacı, “genişletilebilirlik” tir. Birbirinden
 
 Aynı arayüzü uygulayan somut sınıflar oluşturun.
 
+![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/malzemelerjava.png)
+
 ```java
 public interface Malzemeler {
    void yap();
