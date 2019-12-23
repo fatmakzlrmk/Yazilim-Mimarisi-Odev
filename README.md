@@ -164,5 +164,7 @@ Malzemeler3.yap();
 Bir nesneye bağlı olan ortak nesneleri üretebilmek için Factory metot tasarım desenini kullandım. Bu noktada Factory metodun kurallarını özetlersem;
 
 1-Metot, bir nesne oluşturmalı
+
 2-Metot, abstract class ya da interface döndürmeli
+
 3-Bu abstract class veya Interface’ler başka sınıflar tarafından implemente edilmeli.
