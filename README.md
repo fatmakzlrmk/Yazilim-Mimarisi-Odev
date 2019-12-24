@@ -7,7 +7,7 @@ Bu kavramı, yazılım dışı dünyadan bir örnekle anlatmaya çalışırsak �
 ![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/composite.png)
 
 
-Çalışan nesnelerinin listesini içeren işci sınıfı oluştururuz.
+Çalışan nesnelerinin listesini içeren işci sınıfı oluşturalım.
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -86,9 +86,10 @@ public class CompositePatternDemo {
 ### Factory Tasarım Deseni
 Factory Method deseninin ana amacı, “genişletilebilirlik” tir. Birbirinden yapısal olarak farklı ancak aynı zamanda birçok karakteristik özelliği ortak olan nesnelerin yönetimi, oluşturma kıstaslarının belirlenmesi ve yaratılması için Factory Metodu kullanılır.
 
-Aynı arayüzü uygulayan somut sınıflar oluşturun.
 
 ![Image of Class](https://github.com/fatmakzlrmk/Yazilim-Mimarisi-Odev/blob/master/malzemelerjava.png)
+
+Aynı arayüzü uygulayan somut sınıflar oluştalım.
 
 ```java
 public interface Malzemeler {
@@ -101,6 +102,8 @@ public class igne implements Malzemeler {
       System.out.println("igne::yap() metodu.");
    }
 }
+```
+```java
 public class kumas implements Malzemeler {
 
    @Override
@@ -108,6 +111,8 @@ public class kumas implements Malzemeler {
       System.out.println("kumas::yap() metodu.");
    }
 }
+```
+```java
 public class iplik implements Malzemeler {
 
    @Override
